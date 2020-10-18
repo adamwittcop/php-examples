@@ -22,7 +22,7 @@ $authResponse = authWithToken($token);
 print("Auth response body: " . "\n" . $authResponse . "\n");
 print("Authentication complete" . "\n");
 
-function createApiToken($publicKey, $secretKey, $issuedAt, $audience) {
+function createApiToken($publicKey, $secretKey, $issuedAt, $audience, $organizationID) {
     $header = array(
         "alg" => "HS256",
         "kid" => $publicKey,
